@@ -1,0 +1,604 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+.header {
+  position: relative;
+}
+.header::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  min-height: 300px;
+  width: 100%;
+  background-image: url(../img/yellow_top_wave_01.png);
+  background-position: left top;
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+.header .container {
+  display: flex;
+  justify-content: space-between;
+}
+@media only screen and (max-width: 992px) {
+  .header .container {
+    justify-content: flex-start;
+  }
+}
+.header .container .navbar-toggler {
+  display: none;
+}
+@media only screen and (max-width: 768px) {
+  .header .container .navbar-toggler {
+    display: block;
+    color: #000;
+    font-size: 20px;
+    z-index: 10;
+  }
+}
+@media only screen and (max-width: 992px) {
+  .header .container .navbar-toggler {
+    display: block;
+    z-index: 10;
+  }
+}
+.header .container .logo img {
+  width: 80px;
+  position: relative;
+  z-index: 10;
+}
+@media only screen and (max-width: 768px) {
+  .header .container .logo img {
+    width: 60px;
+  }
+}
+.header .container .information {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 15px 0;
+  align-items: center;
+  z-index: 100;
+  background-color: #fff;
+  border-radius: 50px;
+  position: fixed;
+  left: 700px;
+}
+@media only screen and (max-width: 1280px) {
+  .header .container .information {
+    left: 500px;
+    display: flex;
+    flex-wrap: nowrap;
+  }
+}
+@media only screen and (max-width: 992px) {
+  .header .container .information {
+    display: none;
+  }
+}
+.header .container .information .menu {
+  display: flex;
+  flex-wrap: nowrap;
+}
+.header .container .information .menu a {
+  text-decoration: none;
+  color: #181818;
+  font-size: 14px;
+  font-weight: 600;
+  margin: 0 15px;
+}
+.header .container .information .menu a:hover {
+  color: #b61984;
+}
+.header .container .information .phone {
+  margin: 0 20px;
+  padding: 10px;
+  border-radius: 50px;
+  font-size: 14px;
+  font-weight: 400;
+  color: #fff;
+  background-color: #b61984;
+  cursor: pointer;
+}
+.header .container .information .phone:hover {
+  color: #b61984;
+  background-color: #fff;
+  border: 1px solid #b61984;
+  transition: all 0.7s;
+}
+.header .container .information .social {
+  display: flex;
+  flex-wrap: nowrap;
+}
+.header .container .information .social a {
+  color: #000;
+  font-size: 14px;
+  margin: 0 3px;
+}
+.header .container .information .social a:hover {
+  color: #b61984;
+  transition: all 0.5s;
+}
+
+.carousel .container {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.carousel .container .item-1 {
+  -webkit-animation: fadeInRight 1s;
+          animation: fadeInRight 1s;
+}
+.carousel .container .item-2 {
+  -webkit-animation: fadeInRight 3s;
+          animation: fadeInRight 3s;
+}
+@media only screen and (max-width: 992px) {
+  .carousel .container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+@media only screen and (max-width: 992px) {
+  .carousel .container .content-left {
+    width: 100%;
+  }
+}
+.carousel .container .content-left .about {
+  color: #b61984;
+  font-size: 18px;
+  font-weight: 600;
+}
+@media only screen and (max-width: 768px) {
+  .carousel .container .content-left .about {
+    font-size: 14px;
+    padding-top: 30px;
+  }
+}
+@media only screen and (max-width: 992px) {
+  .carousel .container .content-left .about {
+    font-size: 20px;
+    padding-top: 50px;
+  }
+}
+.carousel .container .content-left .tittle {
+  font-size: 60px;
+  font-weight: 700;
+}
+@media only screen and (max-width: 768px) {
+  .carousel .container .content-left .tittle {
+    font-size: 40px;
+  }
+}
+.carousel .container .content-right img {
+  width: 100%;
+}
+@media only screen and (max-width: 768px) {
+  .carousel .container .content-right img {
+    padding-bottom: 100px;
+  }
+}
+@media only screen and (max-width: 992px) {
+  .carousel .container .content-right img {
+    padding-bottom: 150px;
+    width: 100%;
+  }
+}
+
+.introduce {
+  position: relative;
+  top: -200px;
+}
+.introduce::before {
+  content: "";
+  min-height: 400px;
+  width: 100%;
+  background-image: url(../img/Violet_top_left_wave.png);
+  background-position: left;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: block;
+}
+.introduce::after {
+  content: "";
+  position: absolute;
+  min-height: 500px;
+  width: 100%;
+  background-image: url(../img/Wave_White_bottom_right_shape_01.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  bottom: 0;
+}
+.introduce .main {
+  background-color: #dcd1f3;
+}
+.introduce .main .container {
+  z-index: 10;
+  position: relative;
+}
+.introduce .main .container .row .teacher {
+  padding: 25px;
+}
+.introduce .main .container .row .teacher .item-1 {
+  -webkit-animation: fadeInRight 1s;
+          animation: fadeInRight 1s;
+}
+.introduce .main .container .row .teacher .item-2 {
+  -webkit-animation: fadeInRight 1.5s;
+          animation: fadeInRight 1.5s;
+}
+.introduce .main .container .row .teacher .item-3 {
+  -webkit-animation: fadeInRight 2s;
+          animation: fadeInRight 2s;
+}
+.introduce .main .container .row .teacher .item-4 {
+  -webkit-animation: fadeInRight 2.5s;
+          animation: fadeInRight 2.5s;
+}
+.introduce .main .container .row .teacher .item-5 {
+  -webkit-animation: fadeInRight 3s;
+          animation: fadeInRight 3s;
+}
+.introduce .main .container .row .teacher .item-6 {
+  -webkit-animation: fadeInRight 3.5s;
+          animation: fadeInRight 3.5s;
+}
+.introduce .main .container .row .teacher .item-7 {
+  -webkit-animation: fadeInRight 4s;
+          animation: fadeInRight 4s;
+}
+.introduce .main .container .row .teacher .item-8 {
+  -webkit-animation: fadeInRight 4.5s;
+          animation: fadeInRight 4.5s;
+}
+.introduce .main .container .row .teacher .item:hover {
+  border-radius: 20px;
+  box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+  transition: all 0.7s;
+}
+.introduce .main .container .row .teacher .item .thumbnail {
+  overflow: hidden;
+  border-radius: 20px 20px 0px 0px;
+}
+.introduce .main .container .row .teacher .item .thumbnail img {
+  width: 100%;
+}
+@media only screen and (max-width: 768px) {
+  .introduce .main .container .row .teacher .item .thumbnail img {
+    width: 100%;
+  }
+}
+.introduce .main .container .row .teacher .item .thumbnail img:hover {
+  transform: scale(1.1);
+  transition: all 1s;
+}
+.introduce .main .container .row .teacher .item .detail {
+  background-color: #fff;
+  text-align: center;
+  padding: 15px;
+  border-radius: 0px 0px 20px 20px;
+}
+.introduce .main .container .row .teacher .item .detail .national {
+  font-size: 14px;
+  color: #b61984;
+  font-weight: 600;
+}
+.introduce .main .container .row .teacher .item .detail .name-teacher {
+  font-size: 20px;
+  font-weight: 700;
+}
+.introduce .main .container .row .teacher .item .detail .description {
+  font-size: 14px;
+}
+
+.course {
+  position: relative;
+}
+.course::after {
+  content: "";
+  position: absolute;
+  min-height: 500px;
+  width: 100%;
+  background-image: url(../img/accent_bottom_wave_01.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  bottom: 0;
+}
+.course .container {
+  z-index: 12;
+  position: relative;
+}
+.course .container .row .item-1 {
+  -webkit-animation: fadeInRight 1s;
+          animation: fadeInRight 1s;
+}
+.course .container .row .item-2 {
+  -webkit-animation: fadeInRight 1.5s;
+          animation: fadeInRight 1.5s;
+}
+.course .container .row .thumbnail img {
+  width: 100%;
+}
+@media only screen and (max-width: 768px) {
+  .course .container .row .thumbnail img {
+    width: 100%;
+    padding-bottom: 30px;
+  }
+}
+.course .container .row .form-subscribe {
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+  padding: 40px;
+  font-size: 14px;
+}
+.course .container .row .form-subscribe form .title {
+  font-size: 40px;
+  font-weight: 700;
+  text-align: center;
+}
+.course .container .row .form-subscribe form .information {
+  display: flex;
+  padding: 5px 0;
+}
+@media only screen and (max-width: 768px) {
+  .course .container .row .form-subscribe form .information {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+.course .container .row .form-subscribe form .information .form-name {
+  display: flex;
+  align-items: center;
+  border-radius: 20px;
+  border: 1px solid rgba(0, 0, 0, 0.1019607843);
+  margin-right: 30px;
+}
+@media only screen and (max-width: 768px) {
+  .course .container .row .form-subscribe form .information .form-name {
+    margin-bottom: 20px;
+    width: 100%;
+    margin-right: 0;
+  }
+}
+.course .container .row .form-subscribe form .information .form-name .icon {
+  color: #b61984;
+  padding-left: 10px;
+}
+.course .container .row .form-subscribe form .information .form-name .formName {
+  padding: 10px;
+  border: none;
+  width: 50%;
+}
+@media only screen and (max-width: 768px) {
+  .course .container .row .form-subscribe form .information .form-name .formName {
+    width: 100%;
+  }
+}
+.course .container .row .form-subscribe form .information .form-name .formName:focus {
+  outline: none !important;
+}
+.course .container .row .form-subscribe form .information .form-email {
+  display: flex;
+  align-items: center;
+  border-radius: 20px;
+  border: 1px solid rgba(0, 0, 0, 0.1019607843);
+}
+@media only screen and (max-width: 768px) {
+  .course .container .row .form-subscribe form .information .form-email {
+    width: 100%;
+  }
+}
+.course .container .row .form-subscribe form .information .form-email .icon {
+  color: #b61984;
+  padding-left: 10px;
+}
+.course .container .row .form-subscribe form .information .form-email .formEmail {
+  padding: 10px;
+  border: none;
+  width: 50%;
+}
+@media only screen and (max-width: 768px) {
+  .course .container .row .form-subscribe form .information .form-email .formEmail {
+    width: 100%;
+  }
+}
+.course .container .row .form-subscribe form .information .form-email .formEmail:focus {
+  outline: none !important;
+}
+.course .container .row .form-subscribe form .form-option {
+  margin: 20px 0;
+  display: flex;
+  align-items: center;
+  border-radius: 20px;
+  border: 1px solid rgba(0, 0, 0, 0.1019607843);
+}
+.course .container .row .form-subscribe form .form-option .icon {
+  color: #b61984;
+  padding-left: 10px;
+}
+.course .container .row .form-subscribe form .form-option .formChoose {
+  width: 100%;
+  padding: 10px;
+  border: none;
+}
+.course .container .row .form-subscribe form .form-option .formChoose:focus {
+  outline: none !important;
+}
+.course .container .row .form-subscribe form .form-message {
+  margin: 20px 0;
+  display: flex;
+  border-radius: 20px;
+  border: 1px solid rgba(0, 0, 0, 0.1019607843);
+}
+.course .container .row .form-subscribe form .form-message .icon {
+  color: #b61984;
+  padding-left: 10px;
+  padding-top: 14px;
+}
+.course .container .row .form-subscribe form .form-message .formMessage {
+  width: 100%;
+  padding: 10px;
+  border: none;
+}
+.course .container .row .form-subscribe form .form-message .formMessage:focus {
+  outline: none !important;
+}
+.course .container .row .form-subscribe form .btn {
+  padding: 10px 40px;
+  border-radius: 50px;
+  font-size: 14px;
+  font-weight: 600;
+  background-color: #b61984;
+  color: #fff;
+}
+@media only screen and (max-width: 768px) {
+  .course .container .row .form-subscribe form .btn {
+    width: 100%;
+  }
+}
+.course .container .row .form-subscribe form .btn:hover {
+  border: 1px solid #b61984;
+  background-color: #fff;
+  color: #b61984;
+  transition: all 0.6s;
+}
+
+.footer {
+  color: #fff;
+  min-height: 500px;
+  background-image: url(../img/footer_background.jpg);
+  background-position: bottom;
+  padding-top: 100px;
+}
+.footer .container .row .item-1 {
+  -webkit-animation: fadeInRight 1s;
+          animation: fadeInRight 1s;
+}
+.footer .container .row .item-2 {
+  -webkit-animation: fadeInRight 1.5s;
+          animation: fadeInRight 1.5s;
+}
+.footer .container .row .item-3 {
+  -webkit-animation: fadeInRight 2s;
+          animation: fadeInRight 2s;
+}
+.footer .container .row .item-4 {
+  -webkit-animation: fadeInRight 2.5s;
+          animation: fadeInRight 2.5s;
+}
+.footer .container .row .contact h3 {
+  font-size: 30px;
+  font-weight: 700;
+}
+.footer .container .row .contact .info {
+  font-size: 14px;
+  line-height: 3;
+}
+.footer .container .row .contact .social a {
+  color: #fff;
+  margin-right: 10px;
+}
+.footer .container .row .contact .social a:hover {
+  color: #000;
+  transition: all 0.5s;
+}
+.footer .container .row .quick-link h3 {
+  font-size: 30px;
+  font-weight: 700;
+}
+.footer .container .row .quick-link ul {
+  padding-left: 0;
+}
+.footer .container .row .quick-link ul li {
+  list-style: none;
+}
+.footer .container .row .quick-link ul li a {
+  text-decoration: none;
+  font-size: 14px;
+  color: #fff;
+  line-height: 3;
+}
+.footer .container .row .quick-link ul li a:hover {
+  opacity: 0.7;
+}
+.footer .container .row .about h3 {
+  font-size: 30px;
+  font-weight: 700;
+}
+.footer .container .row .about ul {
+  padding-left: 0;
+}
+.footer .container .row .about ul li {
+  list-style: none;
+}
+.footer .container .row .about ul li a {
+  text-decoration: none;
+  font-size: 14px;
+  color: #fff;
+  line-height: 3;
+}
+.footer .container .row .about ul li a:hover {
+  opacity: 0.7;
+}
+.footer .container .row .form-subscribe {
+  text-align: center;
+}
+.footer .container .row .form-subscribe h3 {
+  font-size: 30px;
+  font-weight: 700;
+}
+.footer .container .row .form-subscribe .form-import {
+  padding-bottom: 10px;
+}
+.footer .container .row .form-subscribe .form-import .import-email {
+  width: 100%;
+  border-radius: 50px;
+  text-align: center;
+  padding: 20px 0;
+  color: #fff;
+  background-color: #b61984;
+  border: 1px solid #fff;
+}
+.footer .container .row .form-subscribe .form-import .import-email:focus {
+  outline: none !important;
+}
+.footer .container .row .btn-subscribe {
+  width: 100%;
+  padding: 20px 0;
+  border-radius: 50px;
+  border: none;
+  color: #000;
+  font-weight: 600;
+}
+.footer .container .row .btn-subscribe:hover {
+  color: #fff;
+  background-color: #b61984;
+  transition: all 0.7s;
+}
+
+@-webkit-keyframes fadeInRight {
+  0% {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInRight {
+  0% {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}

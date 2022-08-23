@@ -1,0 +1,36 @@
+$test-c1-primary: #b61984;
+$text-c1-dark: #000;
+$text-c1-light: #fff;
+$text-c1-menu: #181818;
+
+$text-xs: 14px;
+$text-base: 16px;
+$text-xl: 18px;
+$text-2xl: 20px;
+$text-3xl: 30px;
+$text-4xl: 40px;
+$text-5xl: 50px;
+$text-6xl: 60px;
+
+$text-light: 300;
+$text-regular: 400;
+$text-semibold: 600;
+$text-bold: 700;
+
+$bg-c1-main: #b61984;
+$bg-c1-light: #fff;
+
+@mixin addBorder($br: 20px, $bd: 1px solid #0000001a) {
+  border-radius: $br;
+  border: $bd;
+}
+@mixin removeBorder($pd: 10px, $bd: none) {
+  padding: $pd;
+  border: $bd;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}

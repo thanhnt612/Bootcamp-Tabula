@@ -1,0 +1,532 @@
+@import "../../themes/variable";
+.header {
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    min-height: 300px;
+    width: 100%;
+    background-image: url(../img/yellow_top_wave_01.png);
+    background-position: left top;
+    background-size: 100%;
+    background-repeat: no-repeat;
+  }
+  .container {
+    display: flex;
+    justify-content: space-between;
+    @media only screen and (max-width: 992px) {
+      justify-content: flex-start;
+    }
+    .navbar-toggler {
+      display: none;
+      @media only screen and (max-width: 768px) {
+        display: block;
+        color: $text-c1-dark;
+        font-size: $text-2xl;
+        z-index: 10;
+      }
+      @media only screen and (max-width: 992px) {
+        display: block;
+        z-index: 10;
+      }
+    }
+    .logo {
+      img {
+        width: 80px;
+        position: relative;
+        z-index: 10;
+        @media only screen and (max-width: 768px) {
+          width: 60px;
+        }
+      }
+    }
+    .information {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 15px 0;
+      align-items: center;
+      z-index: 100;
+      background-color: $bg-c1-light;
+      border-radius: 50px;
+      position: fixed;
+      left: 700px;
+      @media only screen and (max-width: 1280px) {
+        left: 500px;
+        display: flex;
+        flex-wrap: nowrap;
+      }
+      @media only screen and (max-width: 992px) {
+        display: none;
+      }
+      .menu {
+        display: flex;
+        flex-wrap: nowrap;
+        a {
+          text-decoration: none;
+          color: #181818;
+          font-size: $text-xs;
+          font-weight: $text-semibold;
+          margin: 0 15px;
+          &:hover {
+            color: $test-c1-primary;
+          }
+        }
+      }
+      .phone {
+        margin: 0 20px;
+        padding: 10px;
+        border-radius: 50px;
+        font-size: $text-xs;
+        font-weight: $text-regular;
+        color: $text-c1-light;
+        background-color: $bg-c1-main;
+        cursor: pointer;
+        &:hover {
+          color: $test-c1-primary;
+          background-color: $bg-c1-light;
+          border: 1px solid #b61984;
+          transition: all 0.7s;
+        }
+      }
+      .social {
+        display: flex;
+        flex-wrap: nowrap;
+        a {
+          color: #000;
+          font-size: $text-xs;
+          margin: 0 3px;
+          &:hover {
+            color: $test-c1-primary;
+            transition: all 0.5s;
+          }
+        }
+      }
+    }
+  }
+}
+
+.carousel {
+  .container {
+    display: flex;
+    align-items: center;
+    position: relative;
+    @for $i from 0 to 2 {
+      .item-#{$i + 1} {
+        animation: fadeInRight (2s * $i + 1);
+      }
+    }
+    @media only screen and (max-width: 992px) {
+      display: flex;
+      flex-wrap: wrap;
+    }
+    .content-left {
+      @media only screen and (max-width: 992px) {
+        width: 100%;
+      }
+      .about {
+        color: $test-c1-primary;
+        font-size: $text-xl;
+        font-weight: $text-semibold;
+        @media only screen and (max-width: 768px) {
+          font-size: $text-xs;
+          padding-top: 30px;
+        }
+        @media only screen and (max-width: 992px) {
+          font-size: $text-2xl;
+          padding-top: 50px;
+        }
+      }
+      .tittle {
+        font-size: $text-6xl;
+        font-weight: $text-bold;
+        @media only screen and (max-width: 768px) {
+          font-size: $text-4xl;
+        }
+      }
+    }
+    .content-right {
+      img {
+        width: 100%;
+        @media only screen and (max-width: 768px) {
+          padding-bottom: 100px;
+        }
+        @media only screen and (max-width: 992px) {
+          padding-bottom: 150px;
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+.introduce {
+  position: relative;
+  top: -200px;
+  &::before {
+    content: "";
+    min-height: 400px;
+    width: 100%;
+    background-image: url(../img/Violet_top_left_wave.png);
+    background-position: left;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: block;
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    min-height: 500px;
+    width: 100%;
+    background-image: url(../img/Wave_White_bottom_right_shape_01.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    bottom: 0;
+  }
+  .main {
+    background-color: #dcd1f3;
+    .container {
+      z-index: 10;
+      position: relative;
+      .row {
+        .teacher {
+          padding: 25px;
+          @for $i from 0 to 8 {
+            .item-#{$i + 1} {
+              animation: fadeInRight (0.5s * $i + 1);
+            }
+          }
+          .item {
+            &:hover {
+              border-radius: 20px;
+              box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset,
+                rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+                rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+              transition: all 0.7s;
+            }
+            .thumbnail {
+              overflow: hidden;
+              border-radius: 20px 20px 0px 0px;
+              img {
+                width: 100%;
+                @media only screen and (max-width: 768px) {
+                  width: 100%;
+                }
+                &:hover {
+                  transform: scale(1.1);
+                  transition: all 1s;
+                }
+              }
+            }
+            .detail {
+              background-color: $bg-c1-light;
+              text-align: center;
+              padding: 15px;
+              border-radius: 0px 0px 20px 20px;
+              .national {
+                font-size: $text-xs;
+                color: $test-c1-primary;
+                font-weight: $text-semibold;
+              }
+              .name-teacher {
+                font-size: $text-2xl;
+                font-weight: $text-bold;
+              }
+              .description {
+                font-size: $text-xs;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.course {
+  position: relative;
+  &::after {
+    content: "";
+    position: absolute;
+    min-height: 500px;
+    width: 100%;
+    background-image: url(../img/accent_bottom_wave_01.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    bottom: 0;
+  }
+  .container {
+    z-index: 12;
+    position: relative;
+    .row {
+      @for $i from 0 to 2 {
+        .item-#{$i + 1} {
+          animation: fadeInRight (0.5s * $i + 1);
+        }
+      }
+      .thumbnail {
+        img {
+          width: 100%;
+          @media only screen and (max-width: 768px) {
+            width: 100%;
+            padding-bottom: 30px;
+          }
+        }
+      }
+      .form-subscribe {
+        background-color: $bg-c1-light;
+        border-radius: 15px;
+        box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset,
+          rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+          rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+        padding: 40px;
+        font-size: $text-xs;
+        form {
+          .title {
+            font-size: $text-4xl;
+            font-weight: $text-bold;
+            text-align: center;
+          }
+          .information {
+            display: flex;
+            padding: 5px 0;
+            @media only screen and (max-width: 768px) {
+              display: flex;
+              flex-wrap: wrap;
+            }
+            .form-name {
+              display: flex;
+              align-items: center;
+              @include addBorder();
+              margin-right: 30px;
+              @media only screen and (max-width: 768px) {
+                margin-bottom: 20px;
+                width: 100%;
+                margin-right: 0;
+              }
+              .icon {
+                color: $test-c1-primary;
+                padding-left: 10px;
+              }
+              .formName {
+                @include removeBorder();
+                width: 50%;
+                @media only screen and (max-width: 768px) {
+                  width: 100%;
+                }
+                &:focus {
+                  outline: none !important;
+                }
+              }
+            }
+            .form-email {
+              display: flex;
+              align-items: center;
+              @include addBorder();
+              @media only screen and (max-width: 768px) {
+                width: 100%;
+              }
+              .icon {
+                color: $test-c1-primary;
+                padding-left: 10px;
+              }
+              .formEmail {
+                @include removeBorder();
+                width: 50%;
+                @media only screen and (max-width: 768px) {
+                  width: 100%;
+                }
+                &:focus {
+                  outline: none !important;
+                }
+              }
+            }
+          }
+          .form-option {
+            margin: 20px 0;
+            display: flex;
+            align-items: center;
+            @include addBorder();
+            .icon {
+              color: $test-c1-primary;
+              padding-left: 10px;
+            }
+            .formChoose {
+              width: 100%;
+              @include removeBorder();
+              &:focus {
+                outline: none !important;
+              }
+            }
+          }
+          .form-message {
+            margin: 20px 0;
+            display: flex;
+            @include addBorder();
+            .icon {
+              color: $test-c1-primary;
+              padding-left: 10px;
+              padding-top: 14px;
+            }
+            .formMessage {
+              width: 100%;
+              @include removeBorder();
+              &:focus {
+                outline: none !important;
+              }
+            }
+          }
+          .btn {
+            padding: 10px 40px;
+            border-radius: 50px;
+            font-size: $text-xs;
+            font-weight: $text-semibold;
+            background-color: $bg-c1-main;
+            color: $text-c1-light;
+            @media only screen and (max-width: 768px) {
+              width: 100%;
+            }
+            &:hover {
+              border: 1px solid $bg-c1-main;
+              background-color: $bg-c1-light;
+              color: $test-c1-primary;
+              transition: all 0.6s;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.footer {
+  color: $text-c1-light;
+  min-height: 500px;
+  background-image: url(../img/footer_background.jpg);
+  background-position: bottom;
+  padding-top: 100px;
+  .container {
+    .row {
+      @for $i from 0 to 4 {
+        .item-#{$i + 1} {
+          animation: fadeInRight (0.5s * $i + 1);
+        }
+      }
+      .contact {
+        h3 {
+          font-size: $text-3xl;
+          font-weight: $text-bold;
+        }
+        .info {
+          font-size: $text-xs;
+          line-height: 3;
+          .location {
+          }
+          .phone-number {
+          }
+          .date {
+          }
+        }
+        .social {
+          a {
+            color: $text-c1-light;
+            margin-right: 10px;
+            &:hover {
+              color: $text-c1-dark;
+              transition: all 0.5s;
+            }
+          }
+        }
+      }
+      .quick-link {
+        h3 {
+          font-size: $text-3xl;
+          font-weight: $text-bold;
+        }
+        ul {
+          padding-left: 0;
+          li {
+            list-style: none;
+            a {
+              text-decoration: none;
+              font-size: $text-xs;
+              color: $text-c1-light;
+              line-height: 3;
+              &:hover {
+                opacity: 0.7;
+              }
+            }
+          }
+        }
+      }
+      .about {
+        h3 {
+          font-size: $text-3xl;
+          font-weight: $text-bold;
+        }
+        ul {
+          padding-left: 0;
+          li {
+            list-style: none;
+            a {
+              text-decoration: none;
+              font-size: $text-xs;
+              color: $text-c1-light;
+              line-height: 3;
+              &:hover {
+                opacity: 0.7;
+              }
+            }
+          }
+        }
+      }
+      .form-subscribe {
+        text-align: center;
+        h3 {
+          font-size: $text-3xl;
+          font-weight: $text-bold;
+        }
+        .form-import {
+          padding-bottom: 10px;
+          .import-email {
+            width: 100%;
+            border-radius: 50px;
+            text-align: center;
+            padding: 20px 0;
+            color: $text-c1-light;
+            background-color: $bg-c1-main;
+            border: 1px solid #fff;
+            &:focus {
+              outline: none !important;
+            }
+          }
+        }
+      }
+      .btn-subscribe {
+        width: 100%;
+        padding: 20px 0;
+        border-radius: 50px;
+        border: none;
+        color: $text-c1-dark;
+        font-weight: $text-semibold;
+        &:hover {
+          color: $text-c1-light;
+          background-color: $bg-c1-main;
+          transition: all 0.7s;
+        }
+      }
+    }
+  }
+}
+
+@keyframes fadeInRight {
+  0% {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
